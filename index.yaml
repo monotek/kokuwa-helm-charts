@@ -1,5 +1,31 @@
 apiVersion: v1
 entries:
+  fluentd-elasticsearch:
+  - apiVersion: v1
+    appVersion: 3.0.4
+    created: "2020-10-03T08:32:10.072219248Z"
+    description: A Fluentd Helm chart for Kubernetes with Elasticsearch output
+    digest: a2ec6ff9ac9e7faee80fb732738dc2eb2d304abc1003c383622dd1f5383d9c19
+    home: https://www.fluentd.org/
+    icon: https://raw.githubusercontent.com/fluent/fluentd-docs/master/public/logo/Fluentd_square.png
+    keywords:
+    - fluentd
+    - elasticsearch
+    - multiline
+    - detect-exceptions
+    - logging
+    maintainers:
+    - email: andre.bauer@kiwigrid.com
+      name: monotek
+    name: fluentd-elasticsearch
+    sources:
+    - https://github.com/kokuwaio/helm-charts/tree/main/charts/fluentd-elasticsearch
+    - https://github.com/fluent/fluentd-kubernetes-daemonset
+    - https://github.com/GoogleCloudPlatform/fluent-plugin-detect-exceptions
+    - https://github.com/kubernetes/kubernetes/tree/master/cluster/addons/fluentd-elasticsearch/fluentd-es-image
+    urls:
+    - https://github.com/monotek/kokuwa-helm-charts/releases/download/fluentd-elasticsearch-10.0.1/fluentd-elasticsearch-10.0.1.tgz
+    version: 10.0.1
   mysqldump:
   - apiVersion: v1
     appVersion: 2.4.1
