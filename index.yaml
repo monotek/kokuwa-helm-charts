@@ -1,6 +1,33 @@
 apiVersion: v1
 entries:
   fluentd-elasticsearch:
+  - apiVersion: v2
+    appVersion: 3.2.0
+    created: "2021-02-24T11:34:06.779455225Z"
+    description: A Fluentd Helm chart for Kubernetes with Elasticsearch output
+    digest: 7abcd758fa0fbf8438bf479d478a33744776c504c7a4ad97b173ec046dff5150
+    home: https://www.fluentd.org/
+    icon: https://raw.githubusercontent.com/fluent/fluentd-docs/master/public/logo/Fluentd_square.png
+    keywords:
+    - fluentd
+    - elasticsearch
+    - multiline
+    - detect-exceptions
+    - logging
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: monotek23@gmail.com
+      name: monotek
+    name: fluentd-elasticsearch
+    sources:
+    - https://github.com/kokuwaio/helm-charts/tree/main/charts/fluentd-elasticsearch
+    - https://github.com/fluent/fluentd-kubernetes-daemonset
+    - https://github.com/GoogleCloudPlatform/fluent-plugin-detect-exceptions
+    - https://github.com/kubernetes/kubernetes/tree/master/cluster/addons/fluentd-elasticsearch/fluentd-es-image
+    type: application
+    urls:
+    - https://github.com/monotek/kokuwa-helm-charts/releases/download/fluentd-elasticsearch-11.8.0/fluentd-elasticsearch-11.8.0.tgz
+    version: 11.8.0
   - apiVersion: v1
     appVersion: 3.0.4
     created: "2020-10-03T08:32:10.072219248Z"
@@ -27,6 +54,33 @@ entries:
     - https://github.com/monotek/kokuwa-helm-charts/releases/download/fluentd-elasticsearch-10.0.1/fluentd-elasticsearch-10.0.1.tgz
     version: 10.0.1
   mysqldump:
+  - apiVersion: v2
+    appVersion: 3.0.0
+    created: "2021-02-24T11:34:06.883859455Z"
+    dependencies:
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.1
+    description: A Helm chart to help backup MySQL databases using mysqldump
+    digest: 8a396bd072e756d9cd121f852f485856cbf06c0583084a1948d4dbd1f4dca499
+    home: https://www.mysql.com/
+    icon: https://www.mysql.com/common/logos/logo-mysql-170x115.png
+    keywords:
+    - mysql
+    - mysqldump
+    - backup
+    maintainers:
+    - email: monotek23@gmail.com
+      name: monotek
+    name: mysqldump
+    sources:
+    - https://github.com/kokuwaio/helm-charts
+    - https://dev.mysql.com/doc/refman/5.7/en/mysqldump.html
+    type: application
+    urls:
+    - https://github.com/monotek/kokuwa-helm-charts/releases/download/mysqldump-4.0.1/mysqldump-4.0.1.tgz
+    version: 4.0.1
   - apiVersion: v1
     appVersion: 2.4.1
     created: "2020-10-03T08:31:18.384253546Z"
@@ -50,4 +104,4 @@ entries:
     urls:
     - https://github.com/monotek/kokuwa-helm-charts/releases/download/mysqldump-3.0.0/mysqldump-3.0.0.tgz
     version: 3.0.0
-generated: "2020-10-03T08:31:18.27229097Z"
+generated: "2021-02-24T11:34:06.883872155Z"
