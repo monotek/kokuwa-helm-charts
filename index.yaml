@@ -2,6 +2,33 @@ apiVersion: v1
 entries:
   fluentd-elasticsearch:
   - apiVersion: v2
+    appVersion: v4.2.3
+    created: "2022-11-10T18:08:08.55120988Z"
+    description: A Fluentd Helm chart for Kubernetes with Elasticsearch output
+    digest: 7c7669e0ea8fead477543360d8ed6b289c3bb7ce7ae99e9a80a8e15262845e92
+    home: https://www.fluentd.org/
+    icon: https://raw.githubusercontent.com/fluent/fluentd-docs/master/public/logo/Fluentd_square.png
+    keywords:
+    - fluentd
+    - elasticsearch
+    - multiline
+    - detect-exceptions
+    - logging
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: monotek23@gmail.com
+      name: monotek
+    name: fluentd-elasticsearch
+    sources:
+    - https://github.com/kokuwaio/helm-charts/tree/main/charts/fluentd-elasticsearch
+    - https://github.com/fluent/fluentd-kubernetes-daemonset
+    - https://github.com/GoogleCloudPlatform/fluent-plugin-detect-exceptions
+    - https://github.com/kubernetes/kubernetes/tree/master/cluster/addons/fluentd-elasticsearch/fluentd-es-image
+    type: application
+    urls:
+    - https://github.com/monotek/kokuwa-helm-charts/releases/download/fluentd-elasticsearch-13.7.1/fluentd-elasticsearch-13.7.1.tgz
+    version: 13.7.1
+  - apiVersion: v2
     appVersion: v4.1.0
     created: "2022-07-12T15:10:50.911113437Z"
     description: A Fluentd Helm chart for Kubernetes with Elasticsearch output
@@ -110,6 +137,33 @@ entries:
   mysqldump:
   - apiVersion: v2
     appVersion: v3.0.16
+    created: "2022-11-10T18:08:08.804785559Z"
+    dependencies:
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.0.14
+    description: A Helm chart to help backup MySQL databases using mysqldump
+    digest: f5c7c221689bee8a10418eaf095adbc69046b9c3c642527bf4ca3951323b41b2
+    home: https://www.mysql.com/
+    icon: https://www.mysql.com/common/logos/logo-mysql-170x115.png
+    keywords:
+    - mysql
+    - mysqldump
+    - backup
+    maintainers:
+    - email: monotek23@gmail.com
+      name: monotek
+    name: mysqldump
+    sources:
+    - https://github.com/kokuwaio/helm-charts
+    - https://dev.mysql.com/doc/refman/5.7/en/mysqldump.html
+    type: application
+    urls:
+    - https://github.com/monotek/kokuwa-helm-charts/releases/download/mysqldump-6.0.0/mysqldump-6.0.0.tgz
+    version: 6.0.0
+  - apiVersion: v2
+    appVersion: v3.0.16
     created: "2022-07-12T15:10:51.039552755Z"
     dependencies:
     - condition: mariadb.enabled
@@ -215,6 +269,29 @@ entries:
   visual-regression-tracker:
   - apiVersion: v2
     appVersion: 4.20.4
+    created: "2022-11-10T18:08:09.054137467Z"
+    dependencies:
+    - condition: vrtConfig.postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.1
+    description: Backend and Frontend application for tracking differences via image
+      comparison
+    digest: 59ec07d39af325356c7c6d8dcac070d9ca2bc7f6218234dbedf3d64d317dbedb
+    home: https://visual-regression-tracker.com
+    maintainers:
+    - email: monotek23@gmail.com
+      name: monotek
+    name: visual-regression-tracker
+    sources:
+    - https://github.com/Visual-Regression-Tracker/Visual-Regression-Tracker
+    - https://github.com/kokuwaio/helm-charts/tree/main/charts/visual-regression-tracker
+    type: application
+    urls:
+    - https://github.com/monotek/kokuwa-helm-charts/releases/download/visual-regression-tracker-0.4.1/visual-regression-tracker-0.4.1.tgz
+    version: 0.4.1
+  - apiVersion: v2
+    appVersion: 4.20.4
     created: "2022-07-20T10:22:58.050779977Z"
     dependencies:
     - condition: vrtConfig.postgresql.enabled
@@ -261,4 +338,4 @@ entries:
     urls:
     - https://github.com/monotek/kokuwa-helm-charts/releases/download/visual-regression-tracker-0.2.0/visual-regression-tracker-0.2.0.tgz
     version: 0.2.0
-generated: "2022-07-20T10:22:58.050798777Z"
+generated: "2022-11-10T18:08:09.054187769Z"
